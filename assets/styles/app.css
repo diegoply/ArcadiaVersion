@@ -1,3 +1,103 @@
+
+
 body {
-    background-color: skyblue;
+    background-color: grey;
+    
 }
+
+.bois{
+    background-color: #AF854F;
+}
+
+.foret{
+    color: #237823;
+}
+
+.backForet{
+    background-color: #237823;
+}
+
+.Title{
+    color: #237823;
+    -webkit-text-stroke: 0.4px white;
+    
+        font-family: "Mochiy Pop One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    
+      
+}
+
+.phoneTitle{
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+
+.MarginTitle{
+    margin-left: 2rem;
+}
+
+.classNavBar{
+    color: #237823;
+    padding-top: 2rem;
+}
+
+.navsize{
+    font-size:medium;
+   
+}
+
+.buttonConnect{
+    background-color: #237823;
+    color: white;
+    
+    border-radius: 45px;
+    font-size: small;
+    margin-right: 6rem;
+}
+
+.marginLogo{
+    margin-left: 4rem;
+}
+
+.menuLogo{
+    margin-top: 1rem;
+    margin-left: 7rem;
+}
+
+.dropButton{
+    width: 20rem;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #AF854F;
+    min-width: 160px;
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: #237823;
+    padding: 8px 0;
+    text-decoration: none;
+    display: block;
+    font-size: 2rem;
+  }
+  
+  
+  /* Ajustement de la largeur du dropdown-menu */
+  .dropdown-content {
+    width: 20rem; 
+    height: 22rem;/* Ajustez la largeur selon vos besoins */
+  }
+
+
+@import "~bootstrap/css/bootstrap";
+
