@@ -108,7 +108,7 @@
   }
 
   .TitleAccueil{
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
 
   .Paragraphe1{
@@ -130,8 +130,20 @@
     border-radius: 10%;
   }
 
-  .marginparagraphe2{
-    
+  .colorbtn{
+    background-color: #AF854F;
+    color:#237823;
+    display: flex;
+    justify-content: center;
+  }
+ 
+  .cardStyle{
+    background-color: #553C2A;
+    color:white;
+    font-family: "Regular";
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10%;
   }
 
 @import "~bootstrap/css/bootstrap";
