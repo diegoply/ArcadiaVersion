@@ -98,32 +98,9 @@
     height: 22rem;/* Ajustez la largeur selon vos besoins */
   }
 
-
   .imageAccueil{
-    border-radius: 10%;
-    height: 36rem;
-    margin-bottom: 8rem;
-    margin-top: 5rem;
-    
+    border-radius: 45%;
   }
 
-  .TitleAccueil{
-    margin-top: 5rem;
-  }
-
-  .Paragraphe1{
-    color:#237823;
-    font-family: "Regular";
-    font-size: 24px;
-    text-align: center;
-  }
-
-  .marginparagraphe{
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    
-  }
-  
 
 @import "~bootstrap/css/bootstrap";
-
