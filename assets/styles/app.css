@@ -146,5 +146,17 @@
     border-radius: 10%;
   }
 
+  .footer{
+    height: 5rem;
+    margin-left: 10rem;
+    color: white;
+    font-family: "Regular";
+    text-align:justify;
+    display: flex;
+    align-items: center;
+  }
+
+
+
 @import "~bootstrap/css/bootstrap";
 
