@@ -112,9 +112,9 @@
   }
 
   .Paragraphe1{
-    color:#237823;
+    color:white;
     font-family: "Regular";
-    font-size: 24px;
+    font-size: 30px;
     text-align: center;
   }
 
@@ -124,6 +124,11 @@
     
   }
   
+  .imageAccueil2{
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+    border-radius: 10%;
+  }
 
 @import "~bootstrap/css/bootstrap";
 
