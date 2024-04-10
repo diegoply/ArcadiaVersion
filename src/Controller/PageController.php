@@ -15,4 +15,16 @@ class PageController extends AbstractController
             'controller_name' => 'PageController',
         ]);
     }
+
+    #[Route('/headerdesktop', name: 'header_desktop')]
+    public function headerDesktop(): Response
+    {
+        return $this->render('partials/_headerdesktop.html.twig');
+    }
+
+    #[Route('/headerphone', name: 'header_phone')]
+    public function headerPhone(): Response
+    {
+        return $this->render('partials/_headerphone.html.twig');
+    }
 }
