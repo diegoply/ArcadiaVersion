@@ -17,9 +17,8 @@
             <div class="card-body">
                 <h5 class="card-title Title d-flex justify-content-center mt-2">Jungle</h5>
             <div class="d-flex justify-content-center ">
-                <button type="button" class="btn colorbtndark Paragraphe2 mt-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                En savoir plus
-                </button>
+                <button type="button" data-bs-toggle="modal" class="btn colorbtndark mt-3" data-bs-target="#myModal"><i class="icon icon-sign-out icon-lg"></i>En savoir plus</button>
+              
             </div>
         </div>
     </div>
@@ -27,22 +26,26 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...<h1>Bonjours</h1>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
-      </div>
+<div class="modal fade DarkWood" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bois Paragraphe1">
+            <div class="modal-header">
+                <button type="button" class="close" aria-hidden="true" data-dismiss="modal">×</button>
+             
+                <h4 class="modal-title">Voici les différents animaux présents dans cette habitats</h4>
+            </div>
+            <div class="modal-body Paragraphe2">
+                <h3>Crocodile:</h>
+                <p>Présentation des crocodiles</p>
+                 <h3>Python:</h>
+                <p>Présentation des Python</p>
+            </div>
+            <div class="modal-footer">
+                
+                <button class="btn btn-inverse Paragraphe1" type="button " data-bs-dismiss="modal"><i class="icon icon-times icon-lg"></i> Fermer</button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
             </div>
