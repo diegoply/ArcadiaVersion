@@ -27,14 +27,19 @@
         {% endblock %}
     </head>
 
+    <body>
+
     <header id="header-container"> 
 
     </header>
     
-    <body>
+    <main class="site-content">
         {% block body %}{% endblock %}
+    </main>
 
+        
+    <footer class="site-footer">
         {% include "partials/_footer.html.twig" %}
-       
+    </footer>
     </body>
 </html>

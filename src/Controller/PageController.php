@@ -27,4 +27,11 @@ class PageController extends AbstractController
     {
         return $this->render('partials/_headerphone.html.twig');
     }
+
+    #[Route('/Habitats', name: 'habitats')]
+    public function habitats(): Response
+    {
+        return $this->render('page/Habitats.html.twig');
+    }
 }
+

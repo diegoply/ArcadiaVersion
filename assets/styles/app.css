@@ -1,4 +1,13 @@
+body{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
+.site-content{
+  flex: 1;
+}
 
 .DarkWood{
     background-color: #553C2A;
