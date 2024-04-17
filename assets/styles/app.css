@@ -127,6 +127,13 @@ body{
     text-align: center;
   }
 
+  .Paragraphe2{
+    color: #237823;
+    font-family: "Regular";
+    font-size: 15px;
+    text-align: center;
+  }
+
   .marginparagraphe{
     margin-top: 5rem;
     margin-bottom: 5rem;
@@ -146,6 +153,13 @@ body{
     justify-content: center;
   }
  
+  .colorbtndark{
+    background-color: #553C2A;
+    color:#237823;
+    display: flex;
+    justify-content: center;
+  }
+
   .cardStyle{
     background-color: #553C2A;
     color:white;
@@ -165,6 +179,18 @@ body{
     align-items: center;
   }
 
+  .habitatsBorder{
+    border-radius: 40px;
+  }
 
+  .habitatsCards{
+    border-radius: 10%;
+    height: 25rem;
+  }
+
+  .imageHabitats{
+    height: 15rem;
+    
+  }
 
 

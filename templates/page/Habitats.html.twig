@@ -4,7 +4,54 @@
 
 {% block body %}
 
+<div class="row DarkWood">
+    <div class="container col-10">
+        <h1 class="Title d-flex justify-content-center TitleAccueil mb-5">Habitats</h1>
+        
+        <div class="container col-10">
+            
+                <!-- Button trigger modal -->
+                <!--Cards-->
+            <div class="card bois col-12 col-md-4 d-flex justify-content-center habitatsCards" style="width: 18rem;">
+                <img src="{{ asset('images/Habitats Jungle.jpg')}}" class="card-img-top img-fluid mt-3 habitatsBorder container col-10 imageHabitats" alt="...">
+            <div class="card-body">
+                <h5 class="card-title Title d-flex justify-content-center mt-2">Jungle</h5>
+            <div class="d-flex justify-content-center ">
+                <button type="button" class="btn colorbtndark Paragraphe2 mt-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                En savoir plus
+                </button>
+            </div>
+        </div>
+    </div>
+                <!--Finds cards -->
 
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...<h1>Bonjours</h1>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
 
 
 
