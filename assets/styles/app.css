@@ -209,3 +209,17 @@ body{
     display: flex;
     justify-content: center;
   }
+
+  .tailleModal{
+    height: 60rem;
+  }
+
+  .marginModalButton{
+    display: flex;
+    margin-left: 17rem;
+  }
+
+  .imageAnimalHabitats{
+    height: 20rem;
+    border-radius: 25px;
+  }
