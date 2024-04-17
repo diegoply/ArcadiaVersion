@@ -105,7 +105,7 @@ body{
   /* Ajustement de la largeur du dropdown-menu */
   .dropdown-content {
     width: 20rem; 
-    height: 22rem;/* Ajustez la largeur selon vos besoins */
+    height: 26rem;/* Ajustez la largeur selon vos besoins */
   }
 
 
@@ -131,6 +131,13 @@ body{
   .Paragraphe2{
     color: #237823;
     font-family: "Regular";
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .Paragraphe3{
+    color: white;
+    font-family: "regular";
     font-size: 15px;
     text-align: center;
   }
@@ -194,4 +201,11 @@ body{
     
   }
 
+  .cardServices{
+    height: 16rem;
+  }
 
+  .serviceMargin{
+    display: flex;
+    justify-content: center;
+  }

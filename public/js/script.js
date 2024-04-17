@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const phoneHeaderUrl = '/headerphone';
 
         // Charger le header approprié en fonction de la taille de l'écran
-        if (window.matchMedia("(min-width: 814px)").matches) {
+        if (window.matchMedia("(min-width: 1010px)").matches) {
             headerContainer.load(desktopHeaderUrl);
         } else {
             headerContainer.load(phoneHeaderUrl);
