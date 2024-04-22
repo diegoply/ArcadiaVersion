@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -20,15 +21,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 180)]
     private ?string $email = null;
 
-    /**
-     * @var list<string> The user roles
-     */
    
 
-    #[ORM\Column]
+    #[ORM\Column(length: 100)]
     private ?string $nom = null;
 
-    #[ORM\Column]
+    #[ORM\Column(length: 100)]
     private ?string $prenom = null;
 
     /**
@@ -133,6 +131,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
+
+    public function getRoles(): array{
+        return[];
+    }
+
+    
     }
 
    
