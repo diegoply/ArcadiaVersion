@@ -39,6 +39,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\JoinColumn(nullable: false)]
     private ?Role $role = null;
 
+
   
 
     public function getId(): ?int
@@ -140,6 +141,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function getRoles(): array
     {
+        if ($this->getRole()){
+            return [$this->getRole()->getLabel()];
+        }
+
         return [];
     }
 
