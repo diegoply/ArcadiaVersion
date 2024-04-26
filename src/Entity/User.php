@@ -37,7 +37,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?string $password = null;
 
-    
+    #[ORM\ManyToOne(inversedBy: 'users')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Role $role = null;
 
   
 
@@ -166,35 +168,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    /**
-     * @return Collection<int, rapportVeterinaire>
-     */
-    public function getRapportVeterinaire(): Collection
-    {
-        return $this->rapportVeterinaire;
-    }
-
-    public function addRapportVeterinaire(rapportVeterinaire $rapportVeterinaire): static
-    {
-        if (!$this->rapportVeterinaire->contains($rapportVeterinaire)) {
-            $this->rapportVeterinaire->add($rapportVeterinaire);
-            $rapportVeterinaire->setUser($this);
-        }
-
-        return $this;
-    }
-
-    public function removeRapportVeterinaire(rapportVeterinaire $rapportVeterinaire): static
-    {
-        if ($this->rapportVeterinaire->removeElement($rapportVeterinaire)) {
-            // set the owning side to null (unless already changed)
-            if ($rapportVeterinaire->getUser() === $this) {
-                $rapportVeterinaire->setUser(null);
-            }
-        }
-
-        return $this;
-    }
+  
 
     
 
