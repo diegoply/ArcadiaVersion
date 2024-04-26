@@ -4,6 +4,8 @@ namespace App\Entity;
 
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -38,6 +40,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\ManyToOne(inversedBy: 'users')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Role $role = null;
+
+    /**
+     * @var Collection<int, rapportVeterinaire>
+     */
+    #[ORM\OneToMany(targetEntity: rapportVeterinaire::class, mappedBy: 'user')]
+    private Collection $rapportVeterinaire;
+
+    public function __construct()
+    {
+        $this->rapportVeterinaire = new ArrayCollection();
+    }
 
 
   
@@ -158,6 +171,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setRole(?Role $role): static
     {
         $this->role = $role;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, rapportVeterinaire>
+     */
+    public function getRapportVeterinaire(): Collection
+    {
+        return $this->rapportVeterinaire;
+    }
+
+    public function addRapportVeterinaire(rapportVeterinaire $rapportVeterinaire): static
+    {
+        if (!$this->rapportVeterinaire->contains($rapportVeterinaire)) {
+            $this->rapportVeterinaire->add($rapportVeterinaire);
+            $rapportVeterinaire->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRapportVeterinaire(rapportVeterinaire $rapportVeterinaire): static
+    {
+        if ($this->rapportVeterinaire->removeElement($rapportVeterinaire)) {
+            // set the owning side to null (unless already changed)
+            if ($rapportVeterinaire->getUser() === $this) {
+                $rapportVeterinaire->setUser(null);
+            }
+        }
 
         return $this;
     }

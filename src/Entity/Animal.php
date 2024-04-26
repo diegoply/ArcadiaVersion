@@ -19,6 +19,9 @@ class Animal
     #[ORM\Column(length: 50)]
     private ?string $etat = null;
 
+    #[ORM\ManyToOne(inversedBy: 'animals')]
+    private ?race $race = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +47,18 @@ class Animal
     public function setEtat(string $etat): static
     {
         $this->etat = $etat;
+
+        return $this;
+    }
+
+    public function getRace(): ?race
+    {
+        return $this->race;
+    }
+
+    public function setRace(?race $race): static
+    {
+        $this->race = $race;
 
         return $this;
     }
