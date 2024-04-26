@@ -141,6 +141,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function getRoles(): array
     {
+        
+
         if ($this->getRole()){
             return [$this->getRole()->getLabel()];
         }
