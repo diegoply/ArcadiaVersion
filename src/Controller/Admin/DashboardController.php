@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Image;
 use App\Entity\Race;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -42,8 +43,8 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
-        
+        yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');    
         yield MenuItem::linkToCrud('Races', 'fa-solid fa-horse', Race::class);
+        yield MenuItem::linkToCrud('Images', 'fa-regular fa-images', Image::class);
     }
 }
