@@ -24,12 +24,14 @@ class ImageCrudController extends AbstractCrudController
     
     public function configureFields(string $pageName): iterable
     {
-        return [
+         [
+            
             //IdField::new('id'),
-            TextField::new('imageName'),
+            yield TextField::new('imageName'),
             //TextField::new('imageSize'),
-            ImageField::new('imageName')->setBasePath('images/image/')->hideOnForm(),
-            TextareaField::new('imageFile')->setFormType(VichImageType::class)->hideOnIndex()
+            yield ImageField::new('imageName')->setBasePath('images/image/')->hideOnForm(),
+            yield TextareaField::new('imageFile')->setFormType(VichImageType::class)->hideOnIndex()
+        
         ];
     }
     

@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ImageRepository;
 use DateTimeImmutable;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -29,6 +30,17 @@ class Image
 
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $updatedAt = null;
+
+
+    //public function __construct()
+    
+
+    public function __toString()
+    {
+        return $this->getImageName().' '.$this->getImageFile();
+    }
+
+
 
     public function getId(): ?int
     {

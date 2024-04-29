@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Habitat;
 use App\Entity\Image;
 use App\Entity\Race;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -46,5 +47,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');    
         yield MenuItem::linkToCrud('Races', 'fa-solid fa-horse', Race::class);
         yield MenuItem::linkToCrud('Images', 'fa-regular fa-images', Image::class);
+        yield MenuItem::linkToCrud('habitats', 'fa-solid fa-panorama', Habitat::class);
     }
 }
