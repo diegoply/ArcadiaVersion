@@ -26,7 +26,11 @@ class RapportVeterinaire
     #[ORM\ManyToOne(inversedBy: 'rapportVeterinaire')]
     private ?Animal $animal = null;
 
-   
+ 
+    public function __toString()
+    {
+        return $this->getAnimal();
+    }
 
     public function getId(): ?int
     {

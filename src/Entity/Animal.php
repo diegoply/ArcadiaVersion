@@ -19,7 +19,7 @@ class Animal
     #[ORM\Column(length: 50)]
     private ?string $prenom = null;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 255)]
     private ?string $etat = null;
 
     /**
@@ -37,6 +37,11 @@ class Animal
     public function __construct()
     {
         $this->rapportVeterinaire = new ArrayCollection();
+    }
+
+    public function __toString()
+    {
+        return $this->getPrenom();
     }
 
     public function getId(): ?int
