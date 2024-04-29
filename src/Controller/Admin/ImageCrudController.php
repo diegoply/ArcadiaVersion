@@ -8,6 +8,7 @@ use DateTimeImmutable;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
@@ -27,7 +28,7 @@ class ImageCrudController extends AbstractCrudController
             //IdField::new('id'),
             TextField::new('imageName'),
             //TextField::new('imageSize'),
-            
+            ImageField::new('imageName')->setBasePath('images/image/')->hideOnForm(),
             TextareaField::new('imageFile')->setFormType(VichImageType::class)->hideOnIndex()
         ];
     }
