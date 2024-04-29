@@ -29,6 +29,11 @@ class Race
         $this->animals = new ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return $this->getLabel();
+    }
+
     public function getId(): ?int
     {
         return $this->id;

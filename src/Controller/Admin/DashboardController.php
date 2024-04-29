@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Animal;
 use App\Entity\Habitat;
 use App\Entity\Image;
 use App\Entity\Race;
@@ -45,8 +46,9 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');    
-        yield MenuItem::linkToCrud('Races', 'fa-solid fa-horse', Race::class);
+        yield MenuItem::linkToCrud('Races', 'fa-solid fa-paw', Race::class);
         yield MenuItem::linkToCrud('Images', 'fa-regular fa-images', Image::class);
         yield MenuItem::linkToCrud('habitats', 'fa-solid fa-panorama', Habitat::class);
-    }
+        yield MenuItem::linkToCrud('Animals', 'fa-solid fa-horse', Animal::class);
+    }   
 }
