@@ -22,13 +22,15 @@ class AnimalCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
        yield TextField::new('prenom')
-        ->setFormTypeOption('constraints', [
+            ->setFormTypeOption('constraints', [
                 new Length(['max' => 50])
-        ]);
+            ]);
        
        yield AssociationField::new('race');
        yield AssociationField::new('habitat');
        yield AssociationField::new('rapportVeterinaire');
+            
+
     }
     
 }

@@ -13,6 +13,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Validator\Constraints\Length;
 
 class RapportVeterinaireCrudController extends AbstractCrudController
 {
@@ -26,8 +27,10 @@ class RapportVeterinaireCrudController extends AbstractCrudController
     {
         yield AssociationField::new('animal');
         yield DateTimeField::new('date');
-        yield TextareaField::new('detail');
-
+        yield TextareaField::new('detail')
+        ->setFormTypeOption('constraints', [
+            new Length(['max' => 255])
+        ]);
     }
     
 }
