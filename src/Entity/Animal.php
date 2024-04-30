@@ -19,14 +19,14 @@ class Animal
     #[ORM\Column(length: 50)]
     private ?string $prenom = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $etat = null;
+    //#[ORM\Column(length: 255)]
+    //private ?string $etat = null;
 
     /**
      * @var Collection<int, RapportVeterinaire>
      */
     #[ORM\OneToMany(targetEntity: RapportVeterinaire::class, mappedBy: 'animal')]
-    private Collection $rapportVeterinaire;
+    private ?Collection $rapportVeterinaire = null;
 
     #[ORM\ManyToOne(inversedBy: 'animals')]
     private ?Race $race = null;
@@ -64,27 +64,27 @@ class Animal
         return $this;
     }
 
-    public function getEtat(): ?string
-    {
-        return $this->etat;
-    }
+    //public function getEtat(): ?string
+    //{
+      //  return $this->etat;
+    //}
 
-    public function setEtat(string $etat): static
-    {
-        $this->etat = $etat;
+    //public function setEtat(?string $etat): static
+    //{
+      //  $this->etat = $etat;
 
-        return $this;
-    }
+        //return $this;
+    //}
 
     /**
      * @return Collection<int, RapportVeterinaire>
      */
-    public function getRapportVeterinaire(): Collection
+    public function getRapportVeterinaire(): ?Collection
     {
         return $this->rapportVeterinaire;
     }
 
-    public function addRapportVeterinaire(RapportVeterinaire $rapportVeterinaire): static
+    public function addRapportVeterinaire(?RapportVeterinaire $rapportVeterinaire): static
     {
         if (!$this->rapportVeterinaire->contains($rapportVeterinaire)) {
             $this->rapportVeterinaire->add($rapportVeterinaire);
@@ -94,7 +94,7 @@ class Animal
         return $this;
     }
 
-    public function removeRapportVeterinaire(RapportVeterinaire $rapportVeterinaire): static
+    public function removeRapportVeterinaire(?RapportVeterinaire $rapportVeterinaire): static
     {
         if ($this->rapportVeterinaire->removeElement($rapportVeterinaire)) {
             // set the owning side to null (unless already changed)
