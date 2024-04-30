@@ -34,6 +34,9 @@ class Animal
     #[ORM\ManyToOne(inversedBy: 'animals')]
     private ?Habitat $habitat = null;
 
+    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    private ?ImageAnimal $imageAnimal = null;
+
     public function __construct()
     {
         $this->rapportVeterinaire = new ArrayCollection();
@@ -123,6 +126,18 @@ class Animal
     public function setHabitat(?Habitat $habitat): static
     {
         $this->habitat = $habitat;
+
+        return $this;
+    }
+
+    public function getImageAnimal(): ?ImageAnimal
+    {
+        return $this->imageAnimal;
+    }
+
+    public function setImageAnimal(?ImageAnimal $imageAnimal): static
+    {
+        $this->imageAnimal = $imageAnimal;
 
         return $this;
     }

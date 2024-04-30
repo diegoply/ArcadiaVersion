@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Animal;
 use App\Entity\Habitat;
 use App\Entity\Image;
+use App\Entity\ImageAnimal;
 use App\Entity\Race;
 use App\Entity\RapportVeterinaire;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -48,11 +49,11 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');    
         yield MenuItem::linkToCrud('Races', 'fa-solid fa-paw', Race::class);
-        yield MenuItem::linkToCrud('Images', 'fa-regular fa-images', Image::class);
+        yield MenuItem::linkToCrud('Images Habitat', 'fa-regular fa-images', Image::class);
         yield MenuItem::linkToCrud('habitats', 'fa-solid fa-panorama', Habitat::class);
         yield MenuItem::linkToCrud('Animals', 'fa-solid fa-horse', Animal::class);
         yield MenuItem::linkToCrud('Rapport Vétèrinaire', 'fa-brands fa-dochub', RapportVeterinaire::class);
-        
+        yield MenuItem::linkToCrud('Animal Image', 'fa-brands fa-otter', ImageAnimal::class);
   
     }   
 }

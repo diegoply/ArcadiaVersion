@@ -29,6 +29,7 @@ class AnimalCrudController extends AbstractCrudController
        yield AssociationField::new('race');
        yield AssociationField::new('habitat');
        yield AssociationField::new('rapportVeterinaire');
+       yield AssociationField::new('imageAnimal');
             
 
     }

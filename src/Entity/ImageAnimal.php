@@ -29,6 +29,13 @@ class ImageAnimal
 
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $updatedAt = null;
+
+    public function __toString()
+    {
+        return $this->getImageName().' '.$this->getImageFile();
+    }
+
+
     public function getId(): ?int
     {
         return $this->id;
