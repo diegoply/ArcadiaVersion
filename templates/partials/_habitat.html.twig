@@ -1,18 +1,22 @@
           
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 mt-3">
         
                 <!-- Button trigger modal -->
                 <!--Cards-->
             <div class="card bois  habitatsCards" style="width: 18rem;">
-                <img src="{{ vich_uploader_asset(images, 'imageName') }}" class="card-img-top img-fluid mt-3 habitatsBorder container col-10 imageHabitats" alt="{{habitat.nom}}">
+                <img src="{{ vich_uploader_asset(habitat.image, 'imageFile') }}" class="card-img-top img-fluid mt-3 habitatsBorder container col-10 imageHabitats" alt="{{habitat.nom}}">
             <div class="card-body">
                 <h5 class="card-title Title d-flex justify-content-center mt-2">{{habitat.nom}}</h5>
             <div class="d-flex justify-content-center ">
-                <button type="button" data-bs-toggle="modal" class="btn colorbtndark mt-3" data-bs-target="#myModal"><i class="icon icon-sign-out icon-lg"></i>En savoir plus</button>
-              
+                <button type="button" data-bs-toggle="modal" id="modalButton" class="btn colorbtndark mt-3" data-bs-target="#myModal"><i class="icon icon-sign-out icon-lg"></i>En savoir plus</button>        
             </div>
+           
         </div>
-    </div>
- </div>   <!--Finds cards -->
+        </div>
+        </div>
+     <!--Finds cards -->
+     
 
+  
 
+   
