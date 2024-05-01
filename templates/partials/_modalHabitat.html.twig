@@ -18,25 +18,25 @@
            
            <!--debut animaux-->
 
-           
+           {% for animal in habitat.animals %}
             <div class="row Title">
-                <h2>Jack le crocos</h2>
-                <h3 class="mb-3">Race: Crocodile du nil</h3>
+                <h2>{{ animal.prenom }}</h2>
+                <h3 class="mb-3">Race: {{ animal.race }}</h3>
                     <div class="container col-10">         
-                        <img src="{{ asset('images/Jack le crocos.jpg')}}" alt="image crocodile du nil" width="350rem"   class="imageAnimalHabitats img-fluid">
+                        <img src="{{ vich_uploader_asset(animal.imageAnimal, 'imageFile') }}" alt="image crocodile du nil" width="350rem"   class="imageAnimalHabitats img-fluid">
                     </div>
-                <p class="Paragraphe3 mt-3 ">Le Crocodile du Nil est l'un des quatre plus grands crocodiliens du monde avec le Crocodile marin, le Gavial du Gange et le Caïman noir. Le mâle adulte mesure entre 3,5 et 5 m de long (4 m en moyenne) et pèse 225 à 750 kg2. Cependant, des spécimens dépassant 6,1 m de long et pesant jusqu'à 1 089 kg ont été enregistrés, comme « Gustave » au Burundi3. La femelle est plus petite, d'environ 30 %. La force de morsure du Crocodile du Nil est de l'ordre de 22 kilonewtons, soit 2,2 tonnes-force.</p>
+                {#<p class="Paragraphe3 mt-3 ">{{ animal.rapportVeterinaire }}</p>#}
             </div>   
-
+            {% endfor %}
              
-            <!--fin animaux-->
-
-            <!--Fin modal-->
+       
            
                 
                 <button class="btn btn-inverse Paragraphe1  DarkWood" type="button " data-bs-dismiss="modal"><i class="icon icon-times icon-lg"></i> Fermer</button>
             </div>
+            
         </div>
+          
     </div>
 
 
