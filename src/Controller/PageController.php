@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Repository\HabitatRepository;
+use App\Repository\ImageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -29,9 +31,17 @@ class PageController extends AbstractController
     }
 
     #[Route('/Habitats', name: 'app_habitats')]
-    public function habitats(): Response
+    public function habitats(HabitatRepository $habitatRepository, ImageRepository $imageRepository): Response
     {
-        return $this->render('page/Habitats.html.twig');
+        $habitat = $habitatRepository->findAll();
+        $image = $imageRepository->findAll();
+
+        dump($habitat);
+        dump($image);
+        return $this->render('page/Habitats.html.twig', [
+            'habitats' => $habitat,
+            'images' => $image,
+        ]);
     }
 
     #[Route('/Services', name: 'app_Services')]

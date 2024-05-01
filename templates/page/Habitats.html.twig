@@ -7,83 +7,31 @@
 <div class="row DarkWood">
     <div class="container col-10 mb-5">
         <h1 class="Title d-flex justify-content-center TitleAccueil mb-5">Habitats</h1>
-        
+
+
+       
         <div class="container col-10">
-            
-                <!-- Button trigger modal -->
-                <!--Cards-->
-            <div class="card bois col-12 col-md-4 d-flex justify-content-center habitatsCards" style="width: 18rem;">
-                <img src="{{ asset('images/Habitats Jungle.jpg')}}" class="card-img-top img-fluid mt-3 habitatsBorder container col-10 imageHabitats" alt="...">
-            <div class="card-body">
-                <h5 class="card-title Title d-flex justify-content-center mt-2">Jungle</h5>
-            <div class="d-flex justify-content-center ">
-                <button type="button" data-bs-toggle="modal" class="btn colorbtndark mt-3" data-bs-target="#myModal"><i class="icon icon-sign-out icon-lg"></i>En savoir plus</button>
-              
-            </div>
+    
+        <div class="row">
+        
+        {% for habitat in habitats %}
+      
+        
+             {% include "partials/_habitat.html.twig" %} 
+        
+       
+        {% endfor %}
+        </div>
         </div>
     </div>
-                <!--Finds cards -->
-
-
-<!-- Modal -->
-<div class="modal fade DarkWood " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog ">
-        <div class="modal-content bois Paragraphe1 ">
-            <div class="modal-header d-flex justify-content-center">
-                
-             <!--debut modal-->
-                <h4 class="modal-title Title ">Voici l'habitats jungle</h4>
-            </div>
-            <div class="modal-body Paragraphe3">
-                <p>La jungle est une immense forêt où poussent de façon très serrée, arbres, broussailles et plantes hautes. Pour vivre, cette végétation très dense a besoin de beaucoup d'eau. C'est pourquoi elle se situe dans les régions proches de l'équateur où le climat est pluvieux. Elle se trouve dans le sud-est de l'Asie, en Amérique centrale le long de l'Amazone et en Afrique.</p>
-            </div>
-
-               <h4 class="modal-title">Voici les différents animaux présents dans cette habitats</h4>
-           
-           <!--debut animaux-->
-            <div class="row Title">
-                <h2>Jack le crocos</h2>
-                <h3 class="mb-3">Race: Crocodile du nil</h3>
-                    <div class="container col-10">         
-                        <img src="{{ asset('images/Jack le crocos.jpg')}}" alt="image crocodile du nil" width="350rem"   class="imageAnimalHabitats img-fluid">
-                    </div>
-                <p class="Paragraphe3 mt-3 ">Le Crocodile du Nil est l'un des quatre plus grands crocodiliens du monde avec le Crocodile marin, le Gavial du Gange et le Caïman noir. Le mâle adulte mesure entre 3,5 et 5 m de long (4 m en moyenne) et pèse 225 à 750 kg2. Cependant, des spécimens dépassant 6,1 m de long et pesant jusqu'à 1 089 kg ont été enregistrés, comme « Gustave » au Burundi3. La femelle est plus petite, d'environ 30 %. La force de morsure du Crocodile du Nil est de l'ordre de 22 kilonewtons, soit 2,2 tonnes-force.</p>
-            </div>   
-
-             <div class="row Title">
-                <h2>Pierre le python</h2>
-                <h3 class="mb-3">Race: Python vert</h3>
-                    <div class="container col-10">         
-                        <img src="{{ asset('images/Pierre le python.jpg')}}" alt="image crocodile du nil" width="350rem"   class="imageAnimalHabitats img-fluid">
-                    </div>
-                <p class="Paragraphe3 mt-3 ">Ce python vert arboricole est caractérisé par un corps relativement mince. La queue relativement longue représente environ 14 % de sa longueur totale. La tête est large. Au repos, il s'enroule sur une branche dans une posture distinctive, montrant son museau. Le museau est large et angulaire ; le corps est de section triangulaire avec une arête visible</p>
-            </div>  
-            <!--fin animaux-->
-
-            <!--Fin modal-->
-           
-                
-                <button class="btn btn-inverse Paragraphe1 marginModalButton" type="button " data-bs-dismiss="modal"><i class="icon icon-times icon-lg"></i> Fermer</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-            </div>
-
-        </div>
-
-
-    </div>
-</div>
-
-<div class="row bois">
-    <div class="container col-6 text-center mb-4">  
+<div class="row bois mt-4">
+    <div class="container col-6 text-center mb-4 ">  
         <h1 class="Title  TitleAccueil">Découvrer les différents Habitats</h1>
     </div>
 </div>
 
-
+</div>
+</div>
 
 
 {% endblock %}

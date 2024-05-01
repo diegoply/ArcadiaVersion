@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Habitat;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @extends ServiceEntityRepository<Habitat>
