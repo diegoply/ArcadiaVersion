@@ -1,5 +1,5 @@
           
-        <div class="col-12 col-md-4 mt-3">
+        <div class="col-12 col-md-4 mt-3 d-flex justify-content-center">
         
                 <!-- Button trigger modal -->
                 <!--Cards-->
@@ -8,7 +8,7 @@
             <div class="card-body">
                 <h5 class="card-title Title d-flex justify-content-center mt-2">{{habitat.nom}}</h5>
             <div class="d-flex justify-content-center ">
-                <button type="button" data-bs-toggle="modal" id="modalButton" class="btn colorbtndark mt-3" data-bs-target="#myModal"><i class="icon icon-sign-out icon-lg"></i>En savoir plus</button>        
+                <a href="{{ path('app_AnimauxInHabitat', { 'id': habitat.id }) }}" class="btn">En savoir plus</a>
             </div>
            
         </div>
@@ -19,4 +19,3 @@
 
   
 
-   

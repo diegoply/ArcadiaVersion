@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+
+
+<div class="container col-10 mt-5">
+    <div class="row  align-items-center">
+      <div class="container col-12 col-md-6">
+      <div class="container col-12 col-md-6 d-flex justify-content-center">
+        <h1 class=" Title d-flex justify-content-center  align-items-center">{{ habitat.nom }}</h1>
+      </div>
+
+      <div class="container col-12 col-md-6 d-flex justify-content-center mt-5">
+        <p class=" Paragraphe1 d-flex justify-content-center  align-items-center">{{ habitat.description }}</p>
+      </div>
+    </div>
+      <div class="col-12 col-md-6">
+         <img src="{{ vich_uploader_asset(habitat.image, 'imageFile') }}" class="card-img-top img-fluid mt-3 habitatsBorder container col-10 imageHabitatsPage"  alt="{{habitat.nom}}">
+      </div>
+
+    </div>
+  </div>
+
+      
+{% endblock %}

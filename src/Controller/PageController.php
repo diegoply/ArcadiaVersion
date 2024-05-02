@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Habitat;
 use App\Entity\RapportVeterinaire;
 use App\Repository\AnimalRepository;
 use App\Repository\HabitatRepository;
@@ -36,18 +37,28 @@ class PageController extends AbstractController
     #[Route('/Habitats', name: 'app_habitats')]
     public function habitats(HabitatRepository $habitatRepository, AnimalRepository $animalRepository, RapportVeterinaireRepository $rapportVeterinaire): Response
     {
-        $habitat = $habitatRepository->findAll();
+        $habitats = $habitatRepository->findAll();
         $animal = $animalRepository->findAll();
         
 
-        dump($habitat);
+        dump($habitats);
         dump($animal);
         
         return $this->render('page/Habitats.html.twig', [
-            'habitats' => $habitat,
+            'habitats' => $habitats,
             'animals' => $animal,
             
            
+        ]);
+    }
+
+    #[Route('/Habitats/{id}', name: 'app_AnimauxInHabitat')]
+    public function AnimauxInHabitat(Habitat $habitat): Response
+    {
+        dump($habitat);
+
+        return $this->render('partials/_animauxInHabitat.html.twig', [
+            'habitat' => $habitat,
         ]);
     }
 
@@ -57,5 +68,7 @@ class PageController extends AbstractController
         return $this->render('page/Services.html.twig');
     }
 
+
+    
 }
 
