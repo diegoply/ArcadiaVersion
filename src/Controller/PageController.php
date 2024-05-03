@@ -9,6 +9,7 @@ use App\Repository\AnimalRepository;
 use App\Repository\HabitatRepository;
 use App\Repository\ImageRepository;
 use App\Repository\RapportVeterinaireRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -36,7 +37,7 @@ class PageController extends AbstractController
     }
 
     #[Route('/Habitats', name: 'app_habitats')]
-    public function habitats(HabitatRepository $habitatRepository, AnimalRepository $animalRepository, RapportVeterinaireRepository $rapportVeterinaire): Response
+    public function habitats(HabitatRepository $habitatRepository, AnimalRepository $animalRepository,): Response
     {
         $habitats = $habitatRepository->findAll();
         $animal = $animalRepository->findAll();
@@ -65,17 +66,23 @@ class PageController extends AbstractController
     }
 
     #[Route('/Habitats/{id}/animal', name: 'app_Rapport')]
-    public function Rapport( Animal $animal, RapportVeterinaire $rapportVeterinaire): Response
+    public function Rapport( Animal $animal,  RapportVeterinaireRepository $rapportVeterinaire, EntityManagerInterface $entityManager): Response
     {
+        $animalRepository = $entityManager->getRepository(Animal::class);
+
+        $animalId = 1;
+        $animal = $animalRepository->find($animalId);
+        $rapport = $rapportVeterinaire->findAll();
         //dump($habitat);
         dump($animal);
+        dump($rapport);
         
         
 
         return $this->render('partials/_rapportVeterinaire.html.twig', [
             //'habitat' => $habitat,
             'animals' => $animal,
-            'rapport' => $rapportVeterinaire,
+            'rapport' => $rapport,
           
            
         ]);
