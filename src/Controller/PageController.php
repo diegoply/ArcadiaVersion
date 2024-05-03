@@ -54,13 +54,30 @@ class PageController extends AbstractController
     }
 
     #[Route('/Habitats/{id}', name: 'app_AnimauxInHabitat')]
-    public function AnimauxInHabitat(Habitat $habitat, Animal $animal): Response
+    public function AnimauxInHabitat(Habitat $habitat, Animal $animal,): Response
     {
         dump($habitat);
 
         return $this->render('partials/_animauxInHabitat.html.twig', [
             'habitat' => $habitat,
             'animals' => $animal,
+        ]);
+    }
+
+    #[Route('/Habitats/{id}/animal', name: 'app_Rapport')]
+    public function Rapport( Animal $animal, RapportVeterinaire $rapportVeterinaire): Response
+    {
+        //dump($habitat);
+        dump($animal);
+        
+        
+
+        return $this->render('partials/_rapportVeterinaire.html.twig', [
+            //'habitat' => $habitat,
+            'animals' => $animal,
+            'rapport' => $rapportVeterinaire,
+          
+           
         ]);
     }
 

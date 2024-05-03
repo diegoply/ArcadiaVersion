@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+<div class="row DarkWood">
+    <div class="col-10 mt-5 container">
+<h1 class="Title jd-flex justify-content-center">Voici l'etat de santé de {{ animals.prenom }}</h1>
+
+<h1>{{ animals.prenom }}</h1>
+<p>{{ rapport.detail }}</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

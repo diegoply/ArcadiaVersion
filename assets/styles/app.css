@@ -66,6 +66,15 @@ body{
     margin-right: 6rem;
 }
 
+.buttonConnect2{
+  background-color: #553C2A;
+  color: #237823;
+  
+  border-radius: 45px;
+  font-size: small;
+  margin-right: 6rem;
+}
+
 .marginLogo{
     margin-left: 2rem;
 }
