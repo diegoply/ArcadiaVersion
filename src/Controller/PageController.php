@@ -36,11 +36,11 @@ class PageController extends AbstractController
     }
 
     #[Route('/Habitats', name: 'app_habitats')]
-    public function habitats(HabitatRepository $habitatRepository, AnimalRepository $animalRepository, RapportVeterinaireRepository $rapportVeterinaire): Response
+    public function habitats(HabitatRepository $habitatRepository, AnimalRepository $animalRepository, RapportVeterinaireRepository $rapportVeterinaireRepository): Response
     {
         $habitats = $habitatRepository->findAll();
         $animal = $animalRepository->findAll();
-        
+        $rapport = $rapportVeterinaireRepository->findAll();
 
         dump($habitats);
         dump($animal);
@@ -54,7 +54,7 @@ class PageController extends AbstractController
     }
 
     #[Route('/Habitats/{id}', name: 'app_AnimauxInHabitat')]
-    public function AnimauxInHabitat(Habitat $habitat, Animal $animal,): Response
+    public function AnimauxInHabitat(Habitat $habitat, Animal $animal): Response
     {
         dump($habitat);
 
@@ -67,15 +67,18 @@ class PageController extends AbstractController
     #[Route('/Habitats/{id}/animal', name: 'app_Rapport')]
     public function Rapport( Animal $animal, RapportVeterinaire $rapportVeterinaire): Response
     {
+
+       
         //dump($habitat);
         dump($animal);
-        
+       
         
 
         return $this->render('partials/_rapportVeterinaire.html.twig', [
             //'habitat' => $habitat,
             'animals' => $animal,
-            'rapport' => $rapportVeterinaire,
+            'rapports' => $rapportVeterinaire,
+            
           
            
         ]);
