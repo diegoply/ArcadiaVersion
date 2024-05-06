@@ -25,7 +25,7 @@ class Animal
     /**
      * @var Collection<int, RapportVeterinaire>
      */
-    #[ORM\OneToMany(targetEntity: RapportVeterinaire::class, mappedBy: 'animal', cascade: "remove")]
+    #[ORM\OneToMany(targetEntity: RapportVeterinaire::class, mappedBy: 'animal', cascade: ['remove'])]
     private ?Collection $rapportVeterinaire = null;
 
     #[ORM\ManyToOne(inversedBy: 'animals')]
