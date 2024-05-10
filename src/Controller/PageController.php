@@ -47,20 +47,22 @@ class PageController extends AbstractController
         
         return $this->render('page/Habitats.html.twig', [
             'habitats' => $habitats,
-            'animals' => $animal,
+            //'animals' => $animal,
             
            
         ]);
     }
 
     #[Route('/Habitats/{id}', name: 'app_AnimauxInHabitat')]
-    public function AnimauxInHabitat(Habitat $habitat, Animal $animal): Response
+    public function AnimauxInHabitat( Animal $animal, Habitat $habitat): Response
     {
-        dump($habitat);
+        //dump($habitat);
+        dump($animal);
 
         return $this->render('partials/_animauxInHabitat.html.twig', [
-            'habitat' => $habitat,
-            'animals' => $animal,
+            
+            'habitats' => $habitat,
+            //'animals' => $animal,
         ]);
     }
 
@@ -77,9 +79,7 @@ class PageController extends AbstractController
         return $this->render('partials/_rapportVeterinaire.html.twig', [
             //'habitat' => $habitat,
             'animals' => $animal,
-            'rapports' => $rapportVeterinaire,
-            
-          
+            //'rapport' => $rapportVeterinaire, 
            
         ]);
     }

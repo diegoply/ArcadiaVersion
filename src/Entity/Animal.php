@@ -83,10 +83,10 @@ class Animal
     /**
      * @return Collection<int, RapportVeterinaire>
      */
-    public function getRapportVeterinaire(): ?Collection
-    {
-        return $this->rapportVeterinaire;
-    }
+    public function getRapportVeterinaire(): Collection
+{
+    return $this->rapportVeterinaire ?? new ArrayCollection();
+}
 
     public function addRapportVeterinaire(?RapportVeterinaire $rapportVeterinaire): static
     {
