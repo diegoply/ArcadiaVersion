@@ -18,7 +18,7 @@ class PageController extends AbstractController
     #[Route('/', name: 'app_home')]
     public function index(): Response
     {
-        return $this->render('page/Accueil.html.twig', [
+        return $this->render('page/index.html.twig', [
             'controller_name' => 'PageController',
         ]);
     }
@@ -90,7 +90,7 @@ class PageController extends AbstractController
         return $this->render('page/Services.html.twig');
     }
 
-
+    
     
 }
 

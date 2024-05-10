@@ -10,13 +10,13 @@
     <div class="col-5 "> 
       <ul class="nav justify-content-end mt-2 ">
         <li class="nav-item">
-              <a class="nav-link foret navsize"  href="#">Accueil</a>
+              <a class="nav-link foret navsize"  href="{{ path('app_home') }}" >Accueil</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link foret navsize"  href="#">Services</a>
+              <a class="nav-link foret navsize"  href="{{ path('app_Services') }}">Services</a>
           </li>
           <li class="nav-item">
-               <a class="nav-link foret navsize" href="#">habitats</a>
+               <a class="nav-link foret navsize" href="{{ path('app_habitats') }}">habitats</a>
           </li>
           <li class="nav-item">
               <a class="nav-link foret navsize" href="#">Avis</a>
@@ -28,7 +28,7 @@
     </div>
 
     <div class="col-2 mt-1 d-flex  align-items-center mb-1"> 
-          <button type="button" class="btn buttonConnect ">Connexion</button>
+          <button type="button" class="btn buttonConnect "><a href="{{ path('admin') }}">Connexion</a></button>
         
     </div>
 
