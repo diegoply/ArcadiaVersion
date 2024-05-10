@@ -54,10 +54,10 @@ class PageController extends AbstractController
     }
 
     #[Route('/Habitats/{id}', name: 'app_AnimauxInHabitat')]
-    public function AnimauxInHabitat( Animal $animal, Habitat $habitat): Response
+    public function AnimauxInHabitat( Habitat $habitat): Response
     {
         //dump($habitat);
-        dump($animal);
+        //dump($animal);
 
         return $this->render('partials/_animauxInHabitat.html.twig', [
             
@@ -67,7 +67,7 @@ class PageController extends AbstractController
     }
 
     #[Route('/Habitats/{id}/animal', name: 'app_Rapport')]
-    public function Rapport( Animal $animal, RapportVeterinaire $rapportVeterinaire): Response
+    public function Rapport( Animal $animal): Response
     {
 
        
