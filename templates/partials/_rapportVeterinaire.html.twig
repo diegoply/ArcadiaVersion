@@ -3,19 +3,22 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-<div class="row DarkWood">
-    <div class="col-10 mt-5 container">
-<h1 class="Title jd-flex justify-content-center">Voici l'etat de santé de {{ animals.prenom }}</h1>
+<div class="row DarkWood ">
 
-<h1>{{ animals.prenom }}</h1>
-<p>{{ rapport.detail }}</p>
+    <div class=" mt-5 container">
+<h1 class="Title d-flex justify-content-center mb-5">Voici l'etat de santé de {{ animals.prenom }}</h1>
+<div class="row bois rapportContainer">
+
+
+{% for rapportVeterinaire in animals.rapportVeterinaire %}
+<p class=" text-center d-flex justify-content-center Paragraphe1 marginEtat">{{ rapportVeterinaire.detail }}</p>
     </div>
 </div>
-
-
-
-
-
+ {% endfor %}
+  
+</div>
+</div>
+</div>
 
 
 {% endblock %}

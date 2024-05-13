@@ -25,7 +25,7 @@ class Animal
     /**
      * @var Collection<int, RapportVeterinaire>
      */
-    #[ORM\OneToMany(targetEntity: RapportVeterinaire::class, mappedBy: 'animal')]
+    #[ORM\OneToMany(targetEntity: RapportVeterinaire::class, mappedBy: 'animal', cascade: ['remove'])]
     private ?Collection $rapportVeterinaire = null;
 
     #[ORM\ManyToOne(inversedBy: 'animals')]
@@ -40,12 +40,16 @@ class Animal
     public function __construct()
     {
         $this->rapportVeterinaire = new ArrayCollection();
+       
     }
 
     public function __toString()
     {
         return $this->getPrenom();
+        
     }
+
+ 
 
     public function getId(): ?int
     {
@@ -79,10 +83,10 @@ class Animal
     /**
      * @return Collection<int, RapportVeterinaire>
      */
-    public function getRapportVeterinaire(): ?Collection
-    {
-        return $this->rapportVeterinaire;
-    }
+    public function getRapportVeterinaire(): Collection
+{
+    return $this->rapportVeterinaire ?? new ArrayCollection();
+}
 
     public function addRapportVeterinaire(?RapportVeterinaire $rapportVeterinaire): static
     {

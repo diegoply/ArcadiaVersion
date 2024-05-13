@@ -12,12 +12,12 @@
                 <img src="{{ asset('images/menu.png')}}" alt="menu logo" height="60rem" class="menuLogo d-flex ms-5 mt-4  justify-content-center">
             </button>
         <ul class="dropdown-menu dropdown-content" height="200px">
-                <li><a class="dropdown-item" href="#">Accueil</a></li>
-                <li><a class="dropdown-item" href="#">Services</a></li>
-                <li><a class="dropdown-item" href="#">Habitats</a></li>
+                <li><a class="dropdown-item" href="{{ path('app_home') }}">Accueil</a></li>
+                <li><a class="dropdown-item" href="{{ path('app_Services') }}">Services</a></li>
+                <li><a class="dropdown-item" href="{{ path('app_habitats') }}">Habitats</a></li>
                 <li><a class="dropdown-item" href="#">Avis</a></li>
                 <li><a class="dropdown-item" href="#">Contact</a></li>
-                <li><a class="dropdown-item" href="#">Connexion</a></li>
+                <li><a class="dropdown-item" href="{{ path('admin') }}">Connexion</a></li>
         </ul>
         </div>
         

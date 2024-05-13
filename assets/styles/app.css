@@ -6,6 +6,14 @@ body{
   background-color: #553C2A;
 }
 
+.rapportContainer{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+  background-color: #AF854F;
+}
+
 .site-content{
   flex: 1;
 }
@@ -251,3 +259,9 @@ body{
     height: 20rem;
     border-radius: 25px;
   }
+
+  .marginEtat{
+    margin-top: 14rem;
+  }
+
+ 

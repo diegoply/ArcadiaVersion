@@ -19,7 +19,7 @@ class PageController extends AbstractController
     #[Route('/', name: 'app_home')]
     public function index(): Response
     {
-        return $this->render('page/Accueil.html.twig', [
+        return $this->render('page/index.html.twig', [
             'controller_name' => 'PageController',
         ]);
     }
@@ -37,35 +37,42 @@ class PageController extends AbstractController
     }
 
     #[Route('/Habitats', name: 'app_habitats')]
+<<<<<<< HEAD
     public function habitats(HabitatRepository $habitatRepository, AnimalRepository $animalRepository,): Response
+=======
+    public function habitats(HabitatRepository $habitatRepository, AnimalRepository $animalRepository, RapportVeterinaireRepository $rapportVeterinaireRepository): Response
+>>>>>>> develop
     {
         $habitats = $habitatRepository->findAll();
         $animal = $animalRepository->findAll();
-        
+        $rapport = $rapportVeterinaireRepository->findAll();
 
         dump($habitats);
         dump($animal);
         
         return $this->render('page/Habitats.html.twig', [
             'habitats' => $habitats,
-            'animals' => $animal,
+            //'animals' => $animal,
             
            
         ]);
     }
 
     #[Route('/Habitats/{id}', name: 'app_AnimauxInHabitat')]
-    public function AnimauxInHabitat(Habitat $habitat, Animal $animal,): Response
+    public function AnimauxInHabitat( Habitat $habitat): Response
     {
-        dump($habitat);
+        //dump($habitat);
+        //dump($animal);
 
         return $this->render('partials/_animauxInHabitat.html.twig', [
-            'habitat' => $habitat,
-            'animals' => $animal,
+            
+            'habitats' => $habitat,
+            //'animals' => $animal,
         ]);
     }
 
     #[Route('/Habitats/{id}/animal', name: 'app_Rapport')]
+<<<<<<< HEAD
     public function Rapport( Animal $animal,  RapportVeterinaireRepository $rapportVeterinaire, EntityManagerInterface $entityManager): Response
     {
         $animalRepository = $entityManager->getRepository(Animal::class);
@@ -77,13 +84,26 @@ class PageController extends AbstractController
         dump($animal);
         dump($rapport);
         
+=======
+    public function Rapport( Animal $animal): Response
+    {
+
+       
+        //dump($habitat);
+        dump($animal);
+       
+>>>>>>> develop
         
 
         return $this->render('partials/_rapportVeterinaire.html.twig', [
             //'habitat' => $habitat,
             'animals' => $animal,
+<<<<<<< HEAD
             'rapport' => $rapport,
           
+=======
+            //'rapport' => $rapportVeterinaire, 
+>>>>>>> develop
            
         ]);
     }
@@ -94,7 +114,7 @@ class PageController extends AbstractController
         return $this->render('page/Services.html.twig');
     }
 
-
+    
     
 }
 
