@@ -37,11 +37,7 @@ class PageController extends AbstractController
     }
 
     #[Route('/Habitats', name: 'app_habitats')]
-<<<<<<< HEAD
-    public function habitats(HabitatRepository $habitatRepository, AnimalRepository $animalRepository,): Response
-=======
     public function habitats(HabitatRepository $habitatRepository, AnimalRepository $animalRepository, RapportVeterinaireRepository $rapportVeterinaireRepository): Response
->>>>>>> develop
     {
         $habitats = $habitatRepository->findAll();
         $animal = $animalRepository->findAll();
@@ -72,38 +68,20 @@ class PageController extends AbstractController
     }
 
     #[Route('/Habitats/{id}/animal', name: 'app_Rapport')]
-<<<<<<< HEAD
-    public function Rapport( Animal $animal,  RapportVeterinaireRepository $rapportVeterinaire, EntityManagerInterface $entityManager): Response
-    {
-        $animalRepository = $entityManager->getRepository(Animal::class);
-
-        $animalId = 1;
-        $animal = $animalRepository->find($animalId);
-        $rapport = $rapportVeterinaire->findAll();
-        //dump($habitat);
-        dump($animal);
-        dump($rapport);
-        
-=======
     public function Rapport( Animal $animal): Response
     {
-
-       
+        
         //dump($habitat);
-        dump($animal);
-       
->>>>>>> develop
+        //dump($animal);
+        //dump($rapport);
+        
         
 
         return $this->render('partials/_rapportVeterinaire.html.twig', [
             //'habitat' => $habitat,
             'animals' => $animal,
-<<<<<<< HEAD
-            'rapport' => $rapport,
+           // 'rapport' => $rapport,
           
-=======
-            //'rapport' => $rapportVeterinaire, 
->>>>>>> develop
            
         ]);
     }
