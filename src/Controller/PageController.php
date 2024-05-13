@@ -9,6 +9,7 @@ use App\Repository\AnimalRepository;
 use App\Repository\HabitatRepository;
 use App\Repository\ImageRepository;
 use App\Repository\RapportVeterinaireRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -42,12 +43,11 @@ class PageController extends AbstractController
         $animal = $animalRepository->findAll();
         $rapport = $rapportVeterinaireRepository->findAll();
 
-        dump($habitats);
-        dump($animal);
+       
         
         return $this->render('page/Habitats.html.twig', [
             'habitats' => $habitats,
-            //'animals' => $animal,
+           
             
            
         ]);
@@ -72,7 +72,7 @@ class PageController extends AbstractController
 
        
         //dump($habitat);
-        dump($animal);
+        //dump($animal);
        
         
 
