@@ -7,11 +7,13 @@
 
     <div class=" mt-5 container">
 <h1 class="Title d-flex justify-content-center mb-5">Voici l'etat de santé de {{ animals.prenom }}</h1>
+
 <div class="row bois rapportContainer">
 
 
 {% for rapportVeterinaire in animals.rapportVeterinaire %}
 <p class=" text-center d-flex justify-content-center Paragraphe1 marginEtat">{{ rapportVeterinaire.detail }}</p>
+
     </div>
 </div>
  {% endfor %}

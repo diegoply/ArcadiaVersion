@@ -12,6 +12,7 @@
             </div>
             <div class="modal-body Paragraphe3">
                 <p>{{ habitat.description }}</p>
+                
             </div>
       
                <h4 class="modal-title">Voici les différents animaux présents dans cette habitats</h4>
@@ -22,6 +23,7 @@
             <div class="row Title">
                 <h2>{{ animal.prenom }}</h2>
                 <h3 class="mb-3">Race: {{ animal.race }}</h3>
+               
                 
                     <div class="container col-10">         
                         <img src="{{ vich_uploader_asset(animal.imageAnimal, 'imageFile') }}" alt="image {{ animal.race }}" width="350rem"   class="imageAnimalHabitats img-fluid">
