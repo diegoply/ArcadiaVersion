@@ -1,0 +1,24 @@
+J'ai eu besoin d'effectué une recherche sur un site anglophone pour déployé mon site sur heroku
+j'avais un problème avec mon fichier Procfile, que j'ai pu résoudre en
+faisant commen indiquer dans se site
+stackoverflow.com/questions/19846342/unable-to-parse-procfile
+
+j'ai du crée le fichier Procfile dans un editeur de texte, et cela à fonctionné
+voici l'extrait qui m'a administrateur
+
+Just encounter "Push failed: cannot parse Procfile." on Windows. I can conclude that It IS "Windows-file format" problem, NOT the context of file itself.
+
+make sure to create a clean file, maybe use Notepad++ or other advanced editor to check the file type.
+Share
+Improve this answer
+Follow
+answered Dec 16, 2013 at 5:21
+ruxming's user avatar
+ruxming
+1,77111 gold badge1111 silver badges77 bronze badges
+
+    2
+    Thank you! I was going crazy trying to figure this out. I re-created the file in Notepad++ and that solved the issue! – 
+    Ace Hyzer
+    Mar 28, 2014 at 6:45
+
