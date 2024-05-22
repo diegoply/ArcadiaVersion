@@ -1,0 +1,8 @@
+1er: réaliser maquette du site avec figma.
+2éme: réaliser partie front du site.
+3éme: réaliser shémas de données.
+4éme: réaliser mise en place de la partie back du site, notamment avec créations.
+ des entitys, des relations,  des migrations , ainsi que des fixtures.
+5éme: réaliser partie nonRelationelle avec mongoDB.
+6 éme: réaliser partie décompte des cliques sur animaux.
+7éme: deployé le site sur heroku.
