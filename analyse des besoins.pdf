@@ -1,0 +1,19 @@
+Voici mon projet por l'ECF, nommé Arcadia.
+il s'agit d'un site pour un zoo nommé Arcadia, qui présente à ses 
+visiteur les possibilité qui leurs sont donné, les utitlisateurs ont donc accés
+à des avis d'autres utilisateurs, des services présent sur le site du zoo,
+Les utilisateurs ont aussi accés aux différents habitats (par exemple jungle) avec l'image allant avec, crée par l'administrateur,
+l'utilisteur peut aussi voir les différents animaux présent dans chaques habitats, ainsi que leurs photos,
+l'utilisateur à aussi accés à la races, ainsi qu'aux rapports veterinaires de chaques animales,
+il faut qu'il y est plusieur type de compte, un administrateur (qui gére l'ensemble de la base de données), et qui peut créer des comptes eployé et vétérinaire,
+un employé peut depuis sont espace, valider ou invalider un avis, ainsi que donner l'alimentation quotidienne au animaux, dt modifier les services du zoo,
+le vétérinaire, peut quand à lui, remplir les rapports veterinaires, mettre un commentaire sur les habitats.
+
+il faudra donc pour le projet, qu'il y est une base de donnée relationelle (mySQL), pour les habitats, animaux, races, images, rapports
+vétérinaires, nom, ainsi qu'une base de donnée non relationelle (mongoDB) pour les avis et services et permettant de gérer cela.
+
+il faudra aussi crée les différent utilisteur ainsi que leurs permissions
+
+il faut aussi que au clique sur un animal, sa consultation augmente de 1 (grace à mongoDB)
+
+Enfin, il faudra deployé le site sur internet, afin qu'il soit accessible par tous
