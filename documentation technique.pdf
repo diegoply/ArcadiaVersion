@@ -1,6 +1,6 @@
 Reflexions initiale sur le sujet: J'ai souhaité réaliser un site évoquant l'écologie et la nature,
  je n'ai pas pu faire tout ce qui etait recommandé
  (notamment la partie mongoDB, n'ayant pas trouver de cours ou replay qui me permette de l'utiliser dans le cadre de symfony)
-environnement de travail: j'ai utilisé, visual studio code, avec php, symfony, mysql, ainsi que heroku.
+environnement de travail: j'ai utilisé, visual studio code, avec php, symfony,composer, doctrine, easyadmin, vichuploads mysql, ainsi que heroku.
 modèle conceptuel de données: j'ai utilisé le modèle présent dans l'énoncé de l'ECF.
 déploiement: je vais essayer, de déployer le site, avant que vous ne fassiez la correction.

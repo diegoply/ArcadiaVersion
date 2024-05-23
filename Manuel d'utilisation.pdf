@@ -3,8 +3,9 @@ Actuellement, le site n'est pas fonctionnel sur internet, (j'ai eu une série de
  mais au cas ou je réussisse entre temps, voici l'adresse de mon site
 https://stormy-sands-72287-f1f06322c718.herokuapp.com/
 
-Voici mon lien github (branche main2 ayant eu des problèmes avec la branche main) git@github.com:diegoply/ArcadiaVersion.git
+Voici mon lien github (branche main3 ayant eu des problèmes avec la branche main) git@github.com:diegoply/ArcadiaVersion.git
 
+J'ai utiliser composer et doctrine.
 J'ai réalisé cette application avec une base de données mysql, cependant n'ayant pas trouver de cours ou replay sur mongodb et symfony, je n'est pas pus faire toute la partie NoSQL
 J'ai utilisé easyadmin ainsi que vich upload afin de creer mon dashboard et pouvoir gérer la partie back end
 Afin d'utiliser mon application (en local ou en prod), vous aurez besoin de l'identifiant et du mots de passe de mon compte admin
